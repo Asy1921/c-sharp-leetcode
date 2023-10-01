@@ -1,4 +1,35 @@
 
+// 19.Remove Nth Node From End of List
+// Medium
+// 17.3K
+// 711
+// Companies
+// Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+
+
+// Example 1:
+
+
+// Input: head = [1, 2, 3, 4, 5], n = 2
+// Output: [1,2,3,5]
+// Example 2:
+
+// Input: head = [1], n = 1
+// Output: []
+// Example 3:
+
+// Input: head = [1, 2], n = 1
+// Output: [1]
+
+
+// Constraints:
+
+// The number of nodes in the list is sz.
+// 1 <= sz <= 30
+// 0 <= Node.val <= 100
+// 1 <= n <= sz
+
 namespace LeetCodeProblems;
 using static LeetCodeProblems.LCProblems;
 public partial class LCProblems
@@ -9,16 +40,24 @@ public partial class LCProblems
         {
             return null;
         }
+        ListNode reversed = ReverseList(head);
+        if (n == 1)
+        {
+            reversed = reversed.next;
+            ReverseList(reversed);
+            return head;
+        }
+        ListNode prev = reversed;
+        ListNode toBeRemoved = reversed;
 
-        ListNode prev = head;
-        ListNode toBeRemoved = head;
-        for (int i = 0; i <= n; i++)
+        for (int i = 0; i < n - 1; i++)
         {
             prev = toBeRemoved;
             toBeRemoved = toBeRemoved.next;
         }
         prev.next = toBeRemoved.next;
-        printLinkedList(head);
-        return head;
+
+        return ReverseList(reversed);
     }
+
 }
