@@ -10,6 +10,7 @@ var watch = Stopwatch.StartNew();
 // obj.ReorderList(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null)))));
 // obj.RemoveNthFromEnd(new ListNode(1, new ListNode(2, null)), 2);
 // obj.CopyRandomList();
-obj.WinnerOfGame("AAAAABBBBBBAAAAA");
+// obj.WinnerOfGame("AAAAABBBBBBAAAAA");
+Console.WriteLine(obj.NumIdenticalPairs(new int[] { 1, 3, 5, 5, 6, 1 }));
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
