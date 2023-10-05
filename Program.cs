@@ -4,6 +4,7 @@ using static LeetCodeProblems.LCProblems;
 
 LCProblems obj = new LCProblems();
 var watch = Stopwatch.StartNew();
+
 // Console.WriteLine(obj.DecodeAtIndex("ssd1",2));
 // Console.WriteLine(obj.SortArrayByParity(new int[]{1,3,5,2,7}));
 // Console.WriteLine(obj.IsMonotonic(new int[]{1,3,2}));
@@ -12,6 +13,7 @@ var watch = Stopwatch.StartNew();
 // obj.CopyRandomList();
 // obj.WinnerOfGame("AAAAABBBBBBAAAAA");
 // Console.WriteLine(obj.NumIdenticalPairs(new int[] { 1, 3, 5, 5, 6, 1 }));
-Console.WriteLine(obj.FindDuplicate(new int[] { 1, 3, 5, 5, 6, 1 }));
+// Console.WriteLine(obj.FindDuplicate(new int[] { 1, 3, 5, 5, 6, 1 }));
+Console.WriteLine(obj.MajorityElement(new int[] { 1, 3, 5, 5, 6, 1 }));
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
