@@ -15,6 +15,8 @@ var watch = Stopwatch.StartNew();
 // Console.WriteLine(obj.NumIdenticalPairs(new int[] { 1, 3, 5, 5, 6, 1 }));
 // Console.WriteLine(obj.FindDuplicate(new int[] { 1, 3, 5, 5, 6, 1 }));
 // Console.WriteLine(obj.MajorityElement(new int[] { 1, 3, 5, 5, 6, 1 }));
-Console.WriteLine(obj.SingleNumber(new int[] { 1, 3, 5, 5, 6, 1 }));
+// Console.WriteLine(obj.SingleNumber(new int[] { 1, 3, 5, 5, 6, 1 }));
+Console.WriteLine(obj.Subsets(new int[] { 1, 3, 5, 5, 6, 1 }));
+
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
