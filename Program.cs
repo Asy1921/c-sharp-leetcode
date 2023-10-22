@@ -1,4 +1,5 @@
 ﻿using LeetCodeProblems;
+using Microsoft.VisualBasic;
 using System.Diagnostics;
 using static LeetCodeProblems.LCProblems;
 
@@ -16,7 +17,12 @@ var watch = Stopwatch.StartNew();
 // Console.WriteLine(obj.FindDuplicate(new int[] { 1, 3, 5, 5, 6, 1 }));
 // Console.WriteLine(obj.MajorityElement(new int[] { 1, 3, 5, 5, 6, 1 }));
 // Console.WriteLine(obj.SingleNumber(new int[] { 1, 3, 5, 5, 6, 1 }));
-Console.WriteLine(obj.Subsets(new int[] { 1, 3, 5, 5, 6, 1 }));
+// Console.WriteLine(obj.Ssubsets(new int[] { 1, 3, 5, 5, 6, 1 }));
+
+foreach (var item in obj.CombinationSum(new int[] { 1, 3, 5, 5, 6, 1 }, 7).SelectMany(l => l.Select(o => o)))
+{
+    Console.WriteLine(item);
+}
 
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
