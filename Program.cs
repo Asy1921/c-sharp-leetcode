@@ -19,10 +19,15 @@ var watch = Stopwatch.StartNew();
 // Console.WriteLine(obj.SingleNumber(new int[] { 1, 3, 5, 5, 6, 1 }));
 // Console.WriteLine(obj.Ssubsets(new int[] { 1, 3, 5, 5, 6, 1 }));
 
-foreach (var item in obj.CombinationSum(new int[] { 1, 3, 5, 5, 6, 1 }, 7).SelectMany(l => l.Select(o => o)))
+// foreach (var item in obj.CombinationSum(new int[] { 1, 3, 5, 5, 6, 1 }, 7).SelectMany(l => l.Select(o => o)))
+// {
+//     Console.WriteLine(item);
+// }
+foreach (var item in obj.CombinationSum2(new int[] { 1, 3, 5, 5, 6, 1 }, 7).SelectMany(l => l.Select(o => o)))
 {
     Console.WriteLine(item);
 }
+
 
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
