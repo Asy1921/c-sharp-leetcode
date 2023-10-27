@@ -1,42 +1,42 @@
+
+//79. Word Search
+//Medium
+//14.6K
+//598
+//Companies
+//Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+//The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
 namespace LeetCodeProblems;
 public partial class LCProblems
 {
-    public static char[][] createAndInitializeCharArray()
-    {
-        char[][] charArray = new char[][]
-    {
-        new char[] { 'A', 'B', 'C', 'E' },
-        new char[] { 'S', 'F', 'C', 'S' },
-        new char[] { 'A', 'D', 'E', 'E' }
-    };
-        return charArray;
-    }
-    public bool Exist()
-    {
-        char[][] board = createAndInitializeCharArray();
-
-
-        string word = "ABCB";
-        bool status = false;
-
-        void FindWord(int i, int j, string cur)
+    public bool Exist(char[][] board, string word) {
+        
+        bool dfs(int r,int c,int i,bool[,] vis)
         {
-            if (cur == word)
+            if(i==word.Length)
             {
-                status = true;
-                return;
+                return true;
             }
-            if (i >= board.Length || j >= board[0].Length || cur.Length > word.Length)
+            if(r>=board.Length||c>=board[0].Length||i==word.Length||r<0||c<0||vis[r,c]|| board[r][c] != word[i])
             {
-                return;
+                return false;
             }
-            Console.WriteLine(cur);
-            cur += board[i][j];
-            FindWord(i + 1, j, cur);
-            cur.Remove(cur.Length - 1);
-            FindWord(i, j + 1, cur);
+            vis[r,c]=true;
+            bool res=dfs(r+1,c,i+1,vis)||dfs(r-1,c,i+1,vis)||dfs(r,c+1,i+1,vis)||dfs(r,c-1,i+1,vis);
+            vis[r,c]=false;
+            return res;
         }
-        FindWord(0, 0, "");
-        return status;
+
+        for(int i=0;i<board.Length;i++)
+        {
+            for(int j=0;j<board[0].Length;j++)
+            {
+                if(board[i][j]==word[0]&&dfs(i,j,0,new bool[board.Length,board[0].Length]))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
