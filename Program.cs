@@ -27,8 +27,10 @@ var watch = Stopwatch.StartNew();
 // {
 //     Console.WriteLine(item);
 // }
-
-obj.Exist();
+foreach (string s in obj.LetterCombinations("23"))
+{
+    Console.WriteLine(s);
+}
 
 
 watch.Stop();
