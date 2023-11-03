@@ -26,11 +26,12 @@ var watch = Stopwatch.StartNew();
 // foreach (var item in obj.CombinationSum2(new int[] { 1, 3, 5, 5, 6, 1 }, 7).SelectMany(l => l.Select(o => o)))
 // {
 //     Console.WriteLine(item);
+// // }
+// foreach (string s in obj.LetterCombinations("23"))
+// {
+//     Console.WriteLine(s);
 // }
-foreach (string s in obj.LetterCombinations("23"))
-{
-    Console.WriteLine(s);
-}
+obj.BuildArray(new int[] { 1, 3 }, 3);
 
 
 watch.Stop();
