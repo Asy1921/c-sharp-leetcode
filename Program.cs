@@ -32,8 +32,8 @@ var watch = Stopwatch.StartNew();
 //     Console.WriteLine(s);
 // }
 // obj.BuildArray(new int[] { 1, 3 }, 3);
-Console.WriteLine(obj.Rob2(new int[] { 1, 2, 5, 23 }));
-
+// Console.WriteLine(obj.Rob2(new int[] { 1, 2, 5, 23 }));
+obj.LongestPalindrome("cbbd");
 
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
