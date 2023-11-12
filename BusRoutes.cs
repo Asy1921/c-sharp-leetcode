@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-public class BusRoutes
+namespace LeetCodeProblems;
+public partial class LCProblems
 {
     public static int NumBusesToDestination(int[][] routes, int s, int t)
     {
@@ -48,4 +49,5 @@ public class BusRoutes
 
         return -1;
     }
+}
 
