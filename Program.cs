@@ -35,7 +35,7 @@ var watch = Stopwatch.StartNew();
 // Console.WriteLine(obj.Rob2(new int[] { 1, 2, 5, 23 }));
 // obj.LongestPalindrome("cbbd");
 // obj.CountHomogenous("abbcccaa");
-obj.NumDecodings("12");
-
+// obj.NumDecodings("12");
+obj.CountPalindromicSubsequence("bbcbaba");
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
