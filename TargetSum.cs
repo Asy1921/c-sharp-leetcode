@@ -32,7 +32,30 @@ public partial class LCProblems
             backtrack(i + 1, sum + nums[i], s + "+" + nums[i]);
             backtrack(i + 1, sum - nums[i], s + "-" + nums[i]);
         }
-        backtrack(0, 0, "");
-        return res;
+
+
+        Dictionary<(int, int), int> dp = new Dictionary<(int, int), int>();
+        //Backtrack with caching
+        int bt(int i, int sum)
+        {
+            if (target == sum && i == nums.Length)
+            {
+                return 1;
+            }
+            if (i >= nums.Length)
+            {
+                return 0;
+            }
+            if (dp.ContainsKey((i, sum)))
+            {
+                return dp[(i, sum)];
+            }
+            else
+            {
+                dp.Add((i, sum), bt(i + 1, sum + nums[i]) + bt(i + 1, sum - nums[i]));
+            }
+            return dp[(i, sum)];
+        }
+        return bt(0, 0);
     }
 }
