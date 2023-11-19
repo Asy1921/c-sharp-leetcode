@@ -36,6 +36,7 @@ var watch = Stopwatch.StartNew();
 // obj.LongestPalindrome("cbbd");
 // obj.CountHomogenous("abbcccaa");
 // obj.NumDecodings("12");
-obj.CountPalindromicSubsequence("bbcbaba");
+// obj.CountPalindromicSubsequence("bbcbaba");
+Console.WriteLine(obj.FindTargetSumWays(new int[] { 1, 1, 1, 1, 1 }, 3));
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");
