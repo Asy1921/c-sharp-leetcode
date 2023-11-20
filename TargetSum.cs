@@ -13,7 +13,7 @@
 namespace LeetCodeProblems;
 public partial class LCProblems
 {
-    public int FindTargetSumWays(int[] nums, int target)
+    public int SumWays(int[] nums, int target)
     {
         int res = 0;
 
