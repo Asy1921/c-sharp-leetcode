@@ -10,7 +10,7 @@
 namespace LeetCodeProblems;
 public partial class LCProblems
 {
-    public int TotalMoney(int n)
+    public int TotalMoney1(int n)
     {
         int res = 0;
         int m = n / 7;
