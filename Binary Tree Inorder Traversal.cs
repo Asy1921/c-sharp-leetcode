@@ -6,7 +6,7 @@
 // Companies
 // Given the root of a binary tree, return the inorder traversal of its nodes' values.
 
-//  namespace LeetCodeProblems;
+namespace LeetCodeProblems;
 public partial class LCProblems
 {
     public IList<int> InorderTraversal(TreeNode root)
