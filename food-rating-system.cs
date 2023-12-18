@@ -4,7 +4,7 @@ public partial class LCProblems {
     private Dictionary<string, string> foodCuisineMap = new Dictionary<string, string>();
     private Dictionary<string, SortedSet<Tuple<int, string>>> cuisineFoodMap = new Dictionary<string, SortedSet<Tuple<int, string>>>();
 
-    public FoodRatings(string[] foods, string[] cuisines, int[] ratings) {
+    public void FoodRatings(string[] foods, string[] cuisines, int[] ratings) {
         for (int i = 0; i < foods.Length; ++i) {
             foodRatingMap[foods[i]] = ratings[i];
             foodCuisineMap[foods[i]] = cuisines[i];

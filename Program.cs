@@ -3,8 +3,7 @@ using Microsoft.VisualBasic;
 using System.Diagnostics;
 using static LeetCodeProblems.LCProblems;
 
-LCProblems obj = new LCProblems();
-var watch = Stopwatch.StartNew();
+
 
 // Console.WriteLine(obj.DecodeAtIndex("sssd1",2));
 // Console.WriteLine(obj.SortArrayByParity(new int[]{1,3,5,2,7}));
@@ -38,6 +37,8 @@ var watch = Stopwatch.StartNew();
 // obj.NumDecodings("12");
 // obj.CountPalindromicSubsequence("bbcbaba");
 // Console.WriteLine(obj.FindTargetSumWays(new int[] { 1, 1, 1, 1, 1 }, 3));
+LCProblems obj = new LCProblems();
+var watch = Stopwatch.StartNew();
 obj.IsInterleave("aabcc", "dbbca", "aadbbcbcac");
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");

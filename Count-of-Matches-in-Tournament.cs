@@ -4,7 +4,7 @@ namespace LeetCodeProblems
     public partial class LCProblems
     {
         // Method to calculate the number of matches in a tournament
-        public int NumberOfMatches(int n)
+        public int NumbOfMatches(int n)
         {
             // Initialize the result variable to count the matches
             int result = 0;
