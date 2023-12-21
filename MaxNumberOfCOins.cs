@@ -18,7 +18,7 @@ namespace LeetCodeProblems;
 
 public partial class LCProblems
 {
-    public int MaxCoins(int[] piles)
+    public int MaxCoins1(int[] piles)
     {
         Array.Sort(piles);
         int l = 0;
