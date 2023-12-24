@@ -1,7 +1,7 @@
 ﻿using LeetCodeProblems;
 using Microsoft.VisualBasic;
 using System.Diagnostics;
-using static LeetCodeProblems.LCProblems;
+
 
 
 
@@ -39,6 +39,6 @@ using static LeetCodeProblems.LCProblems;
 // Console.WriteLine(obj.FindTargetSumWays(new int[] { 1, 1, 1, 1, 1 }, 3));
 LCProblems obj = new LCProblems();
 var watch = Stopwatch.StartNew();
-obj.IsInterleave("aabcc", "dbbca", "aadbbcbcac");
+// obj.IsInterleave("aabcc", "dbbca", "aadbbcbcac");
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");

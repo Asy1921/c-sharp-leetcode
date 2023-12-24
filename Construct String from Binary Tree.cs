@@ -7,29 +7,38 @@
 
 // Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
 
- 
- namespace LeetCodeProblems;
+
+using System.Text;
+
+namespace LeetCodeProblems;
 public partial class LCProblems
-{public string Tree2str(TreeNode root) {
-        if (root == null) {
+{
+    public string Tree2str(TreeNode root)
+    {
+        if (root == null)
+        {
             return "";
         }
 
         StringBuilder res = new StringBuilder();
 
-        void preorder(TreeNode cur) {
-            if (cur == null) {
+        void preorder(TreeNode cur)
+        {
+            if (cur == null)
+            {
                 return;
             }
 
             res.Append(cur.val);
 
-            if (cur.left != null || cur.right != null) {
+            if (cur.left != null || cur.right != null)
+            {
                 res.Append("(");
                 preorder(cur.left);
                 res.Append(")");
 
-                if (cur.right != null) {
+                if (cur.right != null)
+                {
                     res.Append("(");
                     preorder(cur.right);
                     res.Append(")");
