@@ -12,7 +12,7 @@ namespace LeetCodeProblems;
 
 public partial class LCProblems
 {
-    public int MaxProduct(int[] nums)
+    public int MaxProduct1(int[] nums)
     {
         int res = nums.Max();
         int min = 1, max = 1;

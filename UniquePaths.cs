@@ -1,6 +1,3 @@
-using System.Security.Principal;
-
-namespace LeetCodeProblems;
 // 62. Unique Paths
 // Medium
 // 15.9K
@@ -11,6 +8,10 @@ namespace LeetCodeProblems;
 // Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
 
 // The test cases are generated so that the answer will be less than or equal to 2 * 109.
+
+using System.Security.Principal;
+
+namespace LeetCodeProblems;
 public partial class LCProblems
 {
     public int UniquePaths(int m, int n)
