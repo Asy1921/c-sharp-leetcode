@@ -5,7 +5,7 @@
 // Companies
 // Given an integer array nums, return the length of the longest strictly increasing 
 // subsequence
-// .
+// .A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 
 
