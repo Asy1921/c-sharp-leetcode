@@ -16,7 +16,7 @@
 namespace LeetCodeProblems;
 public partial class LCProblems
 {
-    public int ClimbingStairs()
+    public int ClimbingStairs(int n)
     {
         int[] dp = new int[n + 1];
         dp[0] = 1;
