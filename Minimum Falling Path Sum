@@ -1,0 +1,53 @@
+//Minimum Falling Path Sum
+namespace LeetCodeProblems;
+public partial class LCProblems
+{ public int MinFallingPathSum(int[][] matrix) {
+         int N = matrix.Length;
+
+        int[,] memo = new int[N, N];
+
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                memo[i, j] = int.MaxValue;
+            }
+        }
+
+        int res = int.MaxValue;
+
+        for (int j = 0; j < N; j++)
+        {
+            res = Math.Min(res, CalcFallSum(0, j));
+        }
+        int CalcFallSum(int i, int j)
+        {
+            if (i == matrix.Length - 1)
+            {
+                return matrix[i][j];
+            }
+
+            if (memo[i, j] != int.MaxValue)
+            {
+                return memo[i, j];
+            }
+
+            int sum = matrix[i][j] + CalcFallSum(i + 1, j);
+
+            if (j > 0)
+            {
+                sum = Math.Min(sum, matrix[i][j] + CalcFallSum(i + 1, j - 1));
+            }
+
+            if (j < matrix.Length - 1)
+            {
+                sum = Math.Min(sum, matrix[i][j] + CalcFallSum(i + 1, j + 1));
+            }
+
+            memo[i, j] = sum;
+            return sum;
+        }
+
+        return res;
+    }
+}
