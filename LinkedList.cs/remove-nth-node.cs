@@ -29,9 +29,9 @@
 // 1 <= sz <= 30
 // 0 <= Node.val <= 100
 // 1 <= n <= sz
-
-namespace LeetCodeProblems;
 using static LeetCodeProblems.LCProblems;
+namespace LeetCodeProblems;
+
 public partial class LCProblems
 {
     public ListNode RemoveNthFromEnd(ListNode head, int n)
