@@ -16,46 +16,45 @@
 namespace LeetCodeProblems;
 public partial class LCProblems
 {
-    public class Solution
-    {
-        string s1 = "";
-        string s2 = "";
-        public bool LeafSimilar(TreeNode root1, TreeNode root2)
-        {
 
-            FindLeafs1(root1);
-            FindLeafs2(root2);
-            Console.WriteLine(s1);
-            Console.WriteLine(s2);
-            return s1 == s2;
-        }
-        public void FindLeafs1(TreeNode cur)
-        {
-            if (cur == null)
-            {
-                return;
-            }
-            if (cur.right == null && cur.left == null)
-            {
-                s1 += cur.val + "-";
-                return;
-            }
-            FindLeafs1(cur.left);
-            FindLeafs1(cur.right);
-        }
-        public void FindLeafs2(TreeNode cur)
-        {
-            if (cur == null)
-            {
-                return;
-            }
-            if (cur.right == null && cur.left == null)
-            {
-                s2 += cur.val + "-";
-                return;
-            }
-            FindLeafs2(cur.left);
-            FindLeafs2(cur.right);
-        }
+    string s1 = "";
+    string s2 = "";
+    public bool LeafSimilar(TreeNode root1, TreeNode root2)
+    {
+
+        FindLeafs1(root1);
+        FindLeafs2(root2);
+        Console.WriteLine(s1);
+        Console.WriteLine(s2);
+        return s1 == s2;
     }
+    public void FindLeafs1(TreeNode cur)
+    {
+        if (cur == null)
+        {
+            return;
+        }
+        if (cur.right == null && cur.left == null)
+        {
+            s1 += cur.val + "-";
+            return;
+        }
+        FindLeafs1(cur.left);
+        FindLeafs1(cur.right);
+    }
+    public void FindLeafs2(TreeNode cur)
+    {
+        if (cur == null)
+        {
+            return;
+        }
+        if (cur.right == null && cur.left == null)
+        {
+            s2 += cur.val + "-";
+            return;
+        }
+        FindLeafs2(cur.left);
+        FindLeafs2(cur.right);
+    }
+
 }

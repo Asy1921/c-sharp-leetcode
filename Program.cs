@@ -40,5 +40,6 @@ using System.Diagnostics;
 LCProblems obj = new LCProblems();
 var watch = Stopwatch.StartNew();
 // obj.IsInterleave("aabcc", "dbbca", "aadbbcbcac");
+obj.SubarraysWithKDistinct(new int[] { 1, 2, 1, 2, 3 }, 2);
 watch.Stop();
 Console.WriteLine("Execution Time:" + watch.ElapsedMilliseconds + "ms");

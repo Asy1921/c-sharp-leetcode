@@ -13,11 +13,11 @@ public partial class LCProblems
 {
     int Diameter = -1;
 
-    public int DiameterOfBinaryTree(TreeNode root)
-    {
-        CalcDiam(root);
-        return Diameter;
-    }
+    // public int DiameterOfBinaryTree(TreeNode root)
+    // {
+    //     CalcDiam(root);
+    //     return Diameter;
+    // }
 
     private int CalcDiam(TreeNode curr)
     {
