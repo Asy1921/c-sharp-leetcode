@@ -1,0 +1,41 @@
+// 1110. Delete Nodes And Return Forest
+// Medium
+// Topics
+// Companies
+// Given the root of a binary tree, each node in the tree has a distinct value.
+
+// After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
+
+// Return the roots of the trees in the remaining forest. You may return the result in any order.
+
+namespace LeetCodeProblems;
+public partial class LCProblems
+{
+    public IList<TreeNode> DelNodes(TreeNode root, int[] to_delete)
+    {
+
+        var DelSet = to_delete.ToHashSet();
+        var res = new List<TreeNode>();
+        delDfs(ref root, true);
+        return res;
+
+        void delDfs(ref TreeNode cur, bool isRoot)
+        {
+            if (cur != null)
+            {
+                var deleted = DelSet.Contains(cur.val);
+                delDfs(ref cur.left, deleted);
+                delDfs(ref cur.right, deleted);
+
+                if (deleted)
+                {
+                    cur = null;
+                }
+                else if (isRoot)
+                {
+                    res.Add(cur);
+                }
+            }
+        }
+    }
+}
